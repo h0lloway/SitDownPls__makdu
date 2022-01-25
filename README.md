@@ -1,1 +1,1 @@
-# SitDownPls__makdu
+# SitDownPls__makdu - промежуточный репозиторий, работа не готова
