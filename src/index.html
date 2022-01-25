@@ -11,14 +11,30 @@
   <!-- fonts -->
   <!-- <link rel="preload" href="fonts/montserrat-regular-webfont.woff2" as="font"> -->
 
-  <!-- css -->
+  <!-- styles -->
+  <!-- swiper -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+  <!-- choices -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 
+  <!-- hover-btn -->
+  <link rel="stylesheet" href="css/hover-min.css">
+
+  <!-- my-styles -->
   <link rel="stylesheet" href="css/main.min.css">
 
 
 
+  <!-- scripts -->
+  <!-- swiper -->
+  <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <!-- choices -->
+  <script defer src="js/choices.min.js"></script>
+
+  <!-- my-JS -->
+  <script defer src="js/main.js"></script>
 
 </head>
 
@@ -59,10 +75,10 @@
         <nav class="header__top-nav">
           <ul class="header__top-list list-reset">
             <li class="header__top-list-item">
-              <a class="item-link grey-link" href="#">О компании</a>
+              <a class="item-link grey-link" href="#">О&nbsp;компании</a>
             </li>
             <li class="header__top-list-item">
-              <a class="item-link grey-link" href="#">Гарантия и возврат</a>
+              <a class="item-link grey-link" href="#">Гарантия и&nbsp;возврат</a>
             </li>
             <li class="header__top-list-item">
               <a class="item-link grey-link" href="#">Корпоративным клиентам</a>
@@ -104,7 +120,7 @@
                 <a class="item-link-bot black-link" href="#">Шоу-рум</a>
               </li>
               <li class="header__bot-list-item">
-                <a class="item-link-bot black-link" href="#">Доставка и оплата</a>
+                <a class="item-link-bot black-link" href="#">Доставка и&nbsp;оплата</a>
               </li>
               <li class="header__bot-list-item">
                 <a class="item-link-bot black-link" href="#">Дисконт</a>
@@ -124,7 +140,7 @@
       <div class="lower">
         <div class="header__lower-left">
           <div class="header__bot-form">
-            <label class="header__bot-label" for="search">
+            <form class="header__bot-label">
               <svg class="search">
                 <use xlink:href="img/sprite.svg#search"></use>
               </svg>
@@ -137,7 +153,7 @@
                   <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
                 </svg>
               </button>
-            </label>
+            </form>
           </div>
 
           <div class="choices-2">
@@ -193,17 +209,11 @@
 
         <!-- Additional required wrapper -->
 
-
-        <!-- ПЕРЕДЕЛАТЬ НА СПИСОК -->
-        <!-- ПЕРЕДЕЛАТЬ НА СПИСОК -->
-        <!-- ПЕРЕДЕЛАТЬ НА СПИСОК -->
-        <!-- ПЕРЕДЕЛАТЬ НА СПИСОК -->
-
-        <div class="swiper-wrapper">
+        <ul class="swiper-wrapper list-reset">
 
           <!-- Slides -->
 
-          <div class="hero__slide hero__slide-one swiper-slide">
+          <li class="hero__slide hero__slide-one swiper-slide">
             <div class="container hero__container">
               <div class="hero__body">
                 <h2 class="hero__title">
@@ -215,10 +225,10 @@
                 </button>
               </div>
             </div>
-          </div>
+          </li>
 
 
-          <div class="hero__slide hero__slide-two swiper-slide">
+          <li class="hero__slide hero__slide-two swiper-slide">
             <div class="container hero__container">
               <div class="hero__body">
                 <h2 class="hero__title">
@@ -230,25 +240,25 @@
                 </button>
               </div>
             </div>
-          </div>
+          </li>
 
 
-          <div class="hero__slide hero__slide-three swiper-slide">
+          <li class="hero__slide hero__slide-three swiper-slide">
             <div class="container hero__container">
               <div class="hero__body">
                 <h2 class="hero__title title-white">
                   Коллекция стильного
-                  <span>и яркого текстиля</span>
+                  <span>и&nbsp;яркого текстиля</span>
                 </h2>
                 <button class="hero__btn my-btn purple-btn">
                   Подробнее
                 </button>
               </div>
             </div>
-          </div>
+          </li>
 
 
-        </div>
+        </ul>
         <!-- If we need pagination -->
         <div class="hero__swiper-pagination swiper-pagination"></div>
 
@@ -271,7 +281,8 @@
 
         <div class="special-price__buttons">
           <button class="special-price__button special-price__swiper-button-prev swiper-button-prev my-btn btn-effects">
-            <svg class="left-arrow" width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="left-arrow" width="32" height="32" viewbox="0 0 32 32" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
               <path d="M18 11L13 16L18 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round" />
               <circle r="15" transform="matrix(-1 0 0 1 16 16)" stroke="#A65CF0" stroke-width="2" />
@@ -306,15 +317,15 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Кресло велюровое
-                      <span>“X-24”</span>
+                      <span>&laquo;X-24&raquo;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
-                    <span class="current">15 990 руб</span>
-                    <span class="old">24 990 руб</span>
+                    <span class="current">15&nbsp;990 руб</span>
+                    <span class="old">24&nbsp;990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">- 9000</span>
+                <span class="special-price__discount">&mdash;&nbsp;9000</span>
                 <button class="special-price__btn my-btn transp-btn">Купить</button>
               </article>
             </li>
@@ -329,15 +340,15 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Диван тканевый
-                      <span>“Z-44”</span>
+                      <span>&laquo;Z-44&raquo;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
-                    <span class="current">22 990 руб</span>
-                    <span class="old">32 990 руб</span>
+                    <span class="current">22&nbsp;990 руб</span>
+                    <span class="old">32&nbsp;990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">- 10000</span>
+                <span class="special-price__discount">&mdash;&nbsp;10000</span>
                 <button class="special-price__btn my-btn transp-btn">Купить</button>
               </article>
             </li>
@@ -352,15 +363,15 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Будильник
-                      <span>“Quartz-23”</span>
+                      <span>&laquo;Quartz-23&raquo;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
-                    <span class="current">1 290 руб</span>
-                    <span class="old">1 890 руб</span>
+                    <span class="current">1&nbsp;290 руб</span>
+                    <span class="old">1&nbsp;890 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">- 600</span>
+                <span class="special-price__discount">&mdash;&nbsp;600</span>
                 <button class="special-price__btn my-btn transp-btn">Купить</button>
               </article>
             </li>
@@ -375,7 +386,7 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Мини-скульптура
-                      <span>“Oh my deer”</span>
+                      <span>&laquo;Oh&nbsp;my&nbsp;deer&raquo;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -383,7 +394,7 @@
                     <span class="old">990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">- 300</span>
+                <span class="special-price__discount">&mdash;&nbsp;300</span>
                 <button class="special-price__btn my-btn transp-btn" tabindex="-1">Купить</button>
               </article>
             </li>
@@ -398,15 +409,15 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Диван вел-флок
-                      <span>“Z-85”</span>
+                      <span>&laquo;Z-85&raquo;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
-                    <span class="current">22 990 руб</span>
-                    <span class="old">32 990 руб</span>
+                    <span class="current">22&nbsp;990 руб</span>
+                    <span class="old">32&nbsp;990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">- 10000</span>
+                <span class="special-price__discount">&mdash;&nbsp;10000</span>
                 <button class="special-price__btn my-btn transp-btn" tabindex="-1">Купить</button>
               </article>
             </li>
@@ -419,15 +430,15 @@
                 <div class="special-price__text">
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
-                      Термометр + гидрометр “H-18”
+                      Термометр + гидрометр &laquo;H-18&raquo;
                     </a>
                   </h3>
                   <div class="special-price__price">
-                    <span class="current">1 390 руб</span>
-                    <span class="old">2 090 руб</span>
+                    <span class="current">1&nbsp;390 руб</span>
+                    <span class="old">2&nbsp;090 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">- 700</span>
+                <span class="special-price__discount">&mdash;&nbsp;700</span>
                 <button class="special-price__btn my-btn transp-btn" tabindex="-1">Купить</button>
               </article>
             </li>
@@ -460,12 +471,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван кожаный
-                    <span>“R-94”</span>
+                    <span>&laquo;R-94&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    94 990 руб
+                    94&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -490,12 +501,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван апартековый
-                    <span>“T-75”</span>
+                    <span>&laquo;T-75&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    69 990 руб
+                    69&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -520,12 +531,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван тканевый
-                    <span>“D-31”</span>
+                    <span>&laquo;D-31&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    28 490 руб
+                    28&nbsp;490 руб
                   </span>
                 </div>
               </div>
@@ -550,12 +561,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван велюровый
-                    <span>“Y-68”</span>
+                    <span>&laquo;Y-68&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    22 990 руб
+                    22&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -579,13 +590,13 @@
               <div class="high-rating__text">
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
-                    Диван из шинила
-                    <span>“W-95”</span>
+                    Диван из&nbsp;шинила
+                    <span>&laquo;W-95&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    22 990 руб
+                    22&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -610,12 +621,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван флоковый
-                    <span>“G-41”</span>
+                    <span>&laquo;G-41&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    17 990 руб
+                    17&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -640,12 +651,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван шиниловый
-                    <span>“V-43”</span>
+                    <span>&laquo;V-43&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    19 990 руб
+                    19&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -670,12 +681,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван велюровый
-                    <span>“S-99”</span>
+                    <span>&laquo;S-99&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    19 990 руб
+                    19&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -700,12 +711,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван флоковый
-                    <span>“H-64”</span>
+                    <span>&laquo;H-64&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    25 990 руб
+                    25&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -729,12 +740,12 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван флоковый
-                    <span>“H-58”</span>
+                    <span>&laquo;H-58&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    23 990 руб
+                    23&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -757,13 +768,13 @@
               <div class="high-rating__text">
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
-                    Диван из кожзама
-                    <span>“R-43”</span>
+                    Диван из&nbsp;кожзама
+                    <span>&laquo;R-43&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    33 990 руб
+                    33&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -786,13 +797,13 @@
               <div class="high-rating__text">
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
-                    Диван из шинила
-                    <span>“C-42”</span>
+                    Диван из&nbsp;шинила
+                    <span>&laquo;C-42&raquo;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
                   <span class="price">
-                    18 990 руб
+                    18&nbsp;990 руб
                   </span>
                 </div>
               </div>
@@ -863,7 +874,7 @@
               </div>
               <div class="top-category__button">
                 <a class="top-category__link-bot purple-link" href="#">
-                  В каталог
+                  В&nbsp;каталог
                 </a>
                 <button class="top-category__btn my-btn" tabindex="-1">
                   <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -904,7 +915,7 @@
               </div>
               <div class="top-category__button">
                 <a class="top-category__link-bot purple-link" href="#">
-                  В каталог
+                  В&nbsp;каталог
                 </a>
                 <button class="top-category__btn my-btn" tabindex="-1">
                   <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -944,7 +955,7 @@
               </div>
               <div class="top-category__button">
                 <a class="top-category__link-bot purple-link" href="#">
-                  В каталог
+                  В&nbsp;каталог
                 </a>
                 <button class="top-category__btn my-btn" tabindex="-1">
                   <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -971,7 +982,7 @@
               </ul>
               <h3 class="top-category__subtitle">
                 <a class="top-category__link-subtitle black-link" href="#">
-                  Тумбы и комоды
+                  Тумбы и&nbsp;комоды
                   <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.625 7.5625L13.0625 11L9.625 14.4375" stroke="#A65CF0" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -984,7 +995,7 @@
               </div>
               <div class="top-category__button">
                 <a class="top-category__link-bot purple-link" href="#">
-                  В каталог
+                  В&nbsp;каталог
                 </a>
                 <button class="top-category__btn my-btn" tabindex="-1">
                   <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1025,7 +1036,7 @@
               </div>
               <div class="top-category__button">
                 <a class="top-category__link-bot purple-link" href="#">
-                  В каталог
+                  В&nbsp;каталог
                 </a>
                 <button class="top-category__btn my-btn" tabindex="-1">
                   <svg width="22" height="22" viewbox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1089,9 +1100,21 @@
             <li class="useful__swiper-slide swiper-slide">
               <div class="useful__body">
                 <p class="useful__text">
-                  И нет сомнений, что сделанные на базе
+                  И&nbsp;нет сомнений, что сделанные на&nbsp;базе
                   <br>
-                  интернет-аналитики выводы представляют собой не что иное?
+                  интернет-аналитики выводы представляют собой не&nbsp;что иное?
+                </p>
+                <a class="useful__link my-btn transp-btn hvr-shutter-in-horizontal" href="#">Читать</a>
+              </div>
+            </li>
+
+
+            <li class="useful__swiper-slide swiper-slide">
+              <div class="useful__body">
+                <p class="useful__text">
+                  Как принято считать, некоторые особенности
+                  <br>
+                  приносят несомненную пользу обществу?
                 </p>
                 <a class="useful__link my-btn transp-btn" href="#">Читать</a>
               </div>
@@ -1101,21 +1124,9 @@
             <li class="useful__swiper-slide swiper-slide">
               <div class="useful__body">
                 <p class="useful__text">
-                  И нет сомнений, что сделанные на базе
+                  Ясность нашей позиции очевидна: укрепление
                   <br>
-                  интернет-аналитики выводы представляют собой не что иное?
-                </p>
-                <a class="useful__link my-btn transp-btn" href="#">Читать</a>
-              </div>
-            </li>
-
-
-            <li class="useful__swiper-slide swiper-slide">
-              <div class="useful__body">
-                <p class="useful__text">
-                  И нет сомнений, что сделанные на базе
-                  <br>
-                  интернет-аналитики выводы представляют собой не что иное?
+                  и&nbsp;развитие внутренней структуры?
                 </p>
                 <a class="useful__link my-btn transp-btn" href="#" tabindex="-1">Читать</a>
               </div>
@@ -1125,9 +1136,11 @@
             <li class="useful__swiper-slide swiper-slide">
               <div class="useful__body">
                 <p class="useful__text">
-                  И нет сомнений, что сделанные на базе
+                  Прежде всего, консультация с&nbsp;широким
                   <br>
-                  интернет-аналитики выводы представляют собой не что иное?
+                  активом однозначно фиксирует
+                  <br>
+                  необходимость распределения?
                 </p>
                 <a class="useful__link my-btn transp-btn" href="#" tabindex="-1">Читать</a>
               </div>
@@ -1137,9 +1150,9 @@
             <li class="useful__swiper-slide swiper-slide">
               <div class="useful__body">
                 <p class="useful__text">
-                  И нет сомнений, что сделанные на базе
+                  Как принято считать, некоторые особенности
                   <br>
-                  интернет-аналитики выводы представляют собой не что иное?
+                  приносят несомненную пользу обществу?
                 </p>
                 <a class="useful__link my-btn transp-btn" href="#" tabindex="-1">Читать</a>
               </div>
@@ -1147,12 +1160,7 @@
 
 
           </ul>
-
-
-
         </div>
-
-
       </div>
     </section>
 
@@ -1160,22 +1168,155 @@
     <section class="contacts">
       <div class="container contacts__container">
         <h2 class="contacts__title title">
-          Мы всегда вам рады!
+          Мы&nbsp;всегда вам рады!
         </h2>
+        <p class="contacts__text">
+          Безусловно, новая модель организационной деятельности в&nbsp;значительной степени
+          <br>
+          обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
+          <button class="contacts__tooltip my-btn">
+
+          </button>
+        </p>
+
+        <form class="contacts__form" action="#">
+
+          <label class="contacts__label" for="text">
+            <input class="contacts__input input-text" type="text" id="text" placeholder="Как Вас зовут?">
+          </label>
+
+          <label class="contacts__label" for="tel">
+            <input class="contacts__input input-tel" type="tel" id="tel" placeholder="Ваш телефон">
+          </label>
+
+          <label class="contacts__label" for="email">
+            <input class="contacts__input input-email" type="email" id="email" placeholder="Ваш e-mail">
+          </label>
+
+          <button class="contacts__btn my-btn purple-btn hvr-rectangle-out">
+            Отправить
+          </button>
+
+          <div class="contacts__checkbox">
+            <input class="contacts__input input-checkbox" type="checkbox" checked="checked"
+              aria-label="Нажмите, если принимаете пользовательское соглашение">
+            <span>
+              Принимаю
+              <a href="#" aria-label="Нажмите чтобы прочитать пользовательское соглашение">
+                пользовательское соглашение
+              </a>
+            </span>
+          </div>
+
+        </form>
       </div>
     </section>
-
-
-
-
   </main>
 
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__top">
+        <div class="footer__picture">
+          <a class="footer__logo" aria-label="Логотип">
 
+            <img src="img/footer-logo.webp" alt="Логотип магазина SDP">
 
-  <!-- script -->
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script src="js/choices.min.js"></script>
-  <script src="js/main.js"></script>
+          </a>
+          <ul class="footer__list-social list-reset">
+
+            <li class="social-list-item">
+              <a class="footer__social-link" href="#">
+                <svg class="social" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#fb"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-list-item">
+              <a class="footer__social-link" href="#">
+                <svg class="social" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="social-list-item">
+              <a class="footer__social-link" href="#">
+                <svg class="social" width="30" height="30">
+                  <use xlink:href="img/sprite.svg#inst"></use>
+                </svg>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footer__lists">
+          <div class="footer__lists-left footer-list">
+            <ul class="footer__list-left-about list-one list-reset">
+              <li class="about-list-item footer__list-item">
+                <a class="footer__link black-link" href="#">О&nbsp;нас</a>
+              </li>
+              <li class="about-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">О&nbsp;компании</a>
+              </li>
+              <li class="about-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Блог</a>
+              </li>
+            </ul>
+
+            <ul class="footer__list-left-services list-two list-reset">
+              <li class="services-list-item footer__list-item">
+                <a class="footer__link black-link" href="#">Услуги</a>
+              </li>
+              <li class="services-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#"> Доставка</a>
+              </li>
+              <li class="services-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Рассрочка и&nbsp;кредит</a>
+              </li>
+              <li class="services-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Сборка и&nbsp;установка</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__lists-right footer-list">
+            <ul class="footer__lists-right-contact list-three list-reset">
+              <li class="contact-list-item footer__list-item">
+                <a class="footer__link black-link" href="#">Связь с&nbsp;нами</a>
+              </li>
+              <li class="contact-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Обратная связь</a>
+              </li>
+              <li class="contact-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Контакты</a>
+              </li>
+            </ul>
+
+            <ul class="footer__lists-right-collab list-three list-reset">
+              <li class="collab-list-item footer__list-item">
+                <a class="footer__link black-link" href="#">Сотрудничество</a>
+              </li>
+              <li class="collab-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Поставщикам</a>
+              </li>
+              <li class="collab-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Оптовикам</a>
+              </li>
+              <li class="collab-list-item footer__list-item">
+                <a class="footer__link grey-link" href="#">Карьера</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__copy">
+        <div class="footer__copy-text">
+          SDP<sup class="reg">&reg;</sup>
+          <span>2011-2021</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

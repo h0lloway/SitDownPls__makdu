@@ -65,6 +65,14 @@ const styles = () => {
     .pipe(browserSync.stream());
 }
 
+// const stylesLib = () => {
+//   return src([
+//     './src/scss/components/**/*.css',
+//     './src/css/main.js'
+// ])
+// }
+
+
 const htmlInclude = () => {
   return src(['./src/*.html'])
     .pipe(fileinclude({

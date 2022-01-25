@@ -86,6 +86,12 @@
     line-height: 33px;
   }
 
+  &__link {
+    overflow: hidden;
+  }
 
+  .hvr-shutter-in-horizontal:before {
+    background-color: #f7f7f7;
+  }
 }
   
