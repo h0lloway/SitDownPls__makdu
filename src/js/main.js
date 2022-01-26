@@ -81,16 +81,6 @@ const UsefulSwiper = new Swiper('.useful__swiper', {
       });
     }
   }
-
-  // on: {
-  //   /* исправляет баг с margin-top остающимся при смене брейкпоинта, это было нужно в 6-й версии свайпера */
-  //   beforeResize: function () {
-  //     this.slides.forEach((el) => {
-  //       el.style.marginTop = "";
-  //     });
-  //   }
-  // }
-
 });
 
 
@@ -148,3 +138,119 @@ multiDefault();
 //     containerOuter: "choices-2"
 //   }
 // });
+
+
+// just validate/ inputmask
+
+
+var selector = document.querySelector("input[type='tel']");
+var im = new Inputmask("+7 (999)-999-99-99");
+
+im.mask(selector);
+
+new JustValidate('.contacts__form', {
+  colorWrong: '#FF6972',
+  rules: {
+    name: {
+      required: true,
+      minLength: 2,
+      maxLength: 30
+    },
+    mail: {
+      required: true,
+    },
+    tel: {
+      required: true,
+      function: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue()
+        return Number(phone) && phone.length === 10
+      }
+    },
+  },
+  messages: {
+    name: {
+      required: 'Недопустимый формат',
+    },
+    tel: {
+      required: 'Недопустимый формат',
+    },
+    mail: {
+      required: 'Недопустимый формат',
+    },
+  },
+
+  submitHandler: function (form) {
+    let formData = new FormData(form);
+
+    fetch('mail.php', {
+      method: 'POST',
+      body: formData
+    }).then(() => {
+      console.log('Отправлено');
+      form.reset();
+    })
+      .catch(() => console.log('Ошибка'))
+  }
+});
+
+
+
+
+
+// new JustValidate('.contacts__form', {
+//   colorWrong: '#FF3030',
+//   rules: {
+//     name: {
+//       required: true,
+//       minLength: 2,
+//       maxLength: 30
+//     },
+//     mail: {
+//       required: true,
+//     },
+//   },
+//   messages: {
+//     name: {
+//       required: 'Недопустимый формат',
+//     },
+//     mail: {
+//       required: 'Недопустимый формат',
+//     },
+//   },
+
+//   // submitHandler: function (form) {
+//   //   let formData = new FormData(form);
+
+//   //   fetch('mail.php', {
+//   //     method: 'POST',
+//   //     body: formData
+//   //   }).then(() => {
+//   //     console.log('Отправлено');
+//   //     form.reset();
+//   //   })
+//   //     .catch(() => console.log('Ошибка'))
+//   // }
+// });
+
+
+
+// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips
+
+
+tippy('.js-tooltip', {
+  theme: 'projects-tooltip',
+
+  animation: 'fade',
+  // followCursor: true,
+  delay: 300,
+
+  placement: "top",
+  allowHTML: !0,
+  role: "tooltip",
+  trigger: "mouseenter focus click",
+  hideOnClick: !0,
+
+  // trigger: 'click',
+  // trigger: 'focus',
+  maxWidth: 250
+});

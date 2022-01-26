@@ -1,0 +1,232 @@
+.contacts {
+
+  padding-bottom: 70px;
+
+  &__container {
+    background-image: url(../img/contacts-bg.webp);
+    background-position: 97% 25px;
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 9px;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--grey-color);
+    width: 50%;
+    margin-bottom: 16px;
+  }
+
+  &__tooltip {
+    display: inline-block;
+    transform: translateY(-1px);
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--orange-color);
+    border-radius: 8px;
+    background-color: transparent;
+    transition: all .3s ease;
+  }
+
+  &__tooltip:hover {
+    background-color: var(--orange-color);
+  }
+
+  &__tooltip:hover span {
+    color: var(--white-color);
+  }
+
+  &__tooltip:focus-visible {
+    background-color: var(--orange-color);
+  }
+
+  &__tooltip:focus-visible span {
+    color: var(--white-color);
+  }
+
+  &__tooltip:active {
+    background-color: var(--orange-color);
+  }
+
+  &__tooltip:active span {
+    color: var(--white-color);
+  }
+
+  &__tooltip span {
+    display: block;
+    font-weight: 700;
+    font-size: 10px;
+    color: var(--orange-color);
+    margin-top: 1px;
+    transition: all .3s ease;
+  } 
+
+  .tippy-box[data-theme~='projects-tooltip'] {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 14px;
+    text-align: center;
+
+    background: var(--black-color);
+    color: var(--white-color);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 624px;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__form input {
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--black-color);
+    width: 100%;
+    height: 54px;
+    border: 1px solid transparent;
+    background-color: var(--f7f7f7-color);
+    padding: 20px 20px 20px 16px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: all .4s ease;
+  }
+
+  &__form input:hover {
+    background: var(--eaeaea-color);
+  }
+
+  &__form input:focus-visible {
+    background: #F8EFFF;
+    border: 1px solid #A65CF0;
+  }
+
+  &__form input.focus-visible {
+    background: var(--f7f7f7-color);
+    border: 1px solid #B8EC64;
+  }
+
+  &__btn {
+    padding: 17px 31px;
+    margin-bottom: 15px;
+    overflow: hidden;
+  }
+
+  &__checkbox {
+    position: relative;
+    margin-top: -2px;
+  }
+
+  &__form .input-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    margin: 0;
+    opacity: 0;
+    z-index: 3;
+  }
+
+  // .hvr-rectangle-out:hover {
+  //   background: #C998FB;
+  // }
+
+  .hvr-rectangle-out:before {
+    background: #C998FB;
+    border-radius: 10px;
+
+    transition: all .4s ease;
+  }
+
+  .hvr-rectangle-out:active::before {
+    background: #7033AC;
+    border-radius: 10px;
+  }
+
+  &__checkbox span {
+    position: relative;
+    padding-left: 22px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--black-color);
+  }
+
+
+  &__checkbox span::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 2px;
+    left: 0;
+    border: 1px solid #999;
+    border-radius: 2px;
+    background-color: #A65CF0;
+    cursor: pointer;
+  }
+
+  &__checkbox span::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 6px;
+    top: 5px;
+    left: 3px;
+    border-top: 2px solid var(--white-color);
+    border-right: 2px solid var(--white-color);
+    border-radius: 2px;
+    transform: rotate(133deg);
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  // &__form .input-checkbox:checked+span::before {
+  //   background-color: transparent;
+  // }
+
+  &__form .input-checkbox:checked+span::after {
+    opacity: 1;
+  }
+
+
+  .rules-link {
+    color: #A65CF0;
+    text-decoration: underline;
+    padding: 0 2px 2px;
+    margin-left: -2px;
+    transition: all .3s ease;
+  }
+
+  .rules-link:hover {
+    color: #C998FB;
+  }
+
+  .rules-link:focus-visible {
+    background: #EBD1FF;
+    color: #7033AC;
+  }
+
+  .rules-link:active {
+    color: #7033AC;
+  }
+
+  .js-validate-error-label {
+    position: absolute;
+    top: -16px;
+    left: 17px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

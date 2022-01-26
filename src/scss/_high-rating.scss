@@ -2,11 +2,7 @@
 
 .high-rating {
 
-  padding-bottom: 70px;
-
-  // &__title {
-
-  // }
+  padding-bottom: 71px;
 
   &__list {
     display: grid;
@@ -110,8 +106,10 @@
 
   .more-item-btn,
   .close-item-btn {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 19px 35px;
   }
 }

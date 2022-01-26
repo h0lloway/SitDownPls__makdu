@@ -14,7 +14,7 @@
 
   &__buttons {
     position: absolute;
-    top: 14px;
+    top: 22px;
     right: 21px;
     display: flex;
     width: max-content;
@@ -75,7 +75,7 @@
   &__img {
     position: relative;
     height: 245px;
-    margin-bottom: 22px;
+    margin-bottom: 17px;
   }
 
   &__img img {
@@ -135,7 +135,7 @@
     line-height: 19px;
 
     color: var(--white-color);
-    padding: 7px 10px 0 10px;
+    padding: 7px 17px 0 17px;
     background-image: url(../img/plashka.png);
     background-repeat: no-repeat;
     background-position: center;

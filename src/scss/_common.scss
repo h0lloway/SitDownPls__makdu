@@ -31,8 +31,8 @@
 @font-face {
   font-family: "Playfair Display";
   src: local("Playfair Display"),
-    url(../fonts/PlayfairDisplaySC-Black.woff2) format("woff2"),
-    url(../fonts/PlayfairDisplaySC-Black.woff) format("woff");
+    url(../fonts/PlayfairDisplay-Black.woff2) format("woff2"),
+    url(../fonts/PlayfairDisplay-Black.woff) format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -48,10 +48,13 @@ html {
   --white-color: #fff;
   --purple-color: #A65CF0;
 
-  // --hover-color:;
-  // --focus-color:;
-  // --active-color:;
+  --orange-color: #FF862F;
+  --light-orange: #FFBD59;
+  --dark-orange: #BB370E;
 
+
+  --eaeaea-color: #eaeaea;
+  --f7f7f7-color: #F7F7F7;
   --cacaca-color: #cacaca;
   --e9e9e9-color: #e9e9e9;
   --grey-color: #999;

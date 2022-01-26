@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   background-color: #333;
-  padding: 153px 0 150px;
+  padding: 153px 0 171px;
   margin-bottom: 72px;
 
   &__title {
@@ -25,6 +25,10 @@
     font-size: 48px;
     line-height: 57.6px;
     color: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+  }
+
+  &__btn {
+    padding: 17px 30px;
   }
 }

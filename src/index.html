@@ -21,6 +21,9 @@
   <!-- hover-btn -->
   <link rel="stylesheet" href="css/hover-min.css">
 
+  <!-- tooltips -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+
   <!-- my-styles -->
   <link rel="stylesheet" href="css/main.min.css">
 
@@ -29,6 +32,10 @@
   <!-- scripts -->
   <!-- swiper -->
   <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+  <!-- tooltips -->
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
 
   <!-- choices -->
   <script defer src="js/choices.min.js"></script>
@@ -51,8 +58,8 @@
           <span class="header__top-select-name">Ваш регион:</span>
 
 
-          <div class="choices-1">
-            <select class="header__top-select multi-default region-select" name="select" id="first-select">
+          <div class="choices-1" tabindex="0">
+            <select class="header__top-select multi-default region-select" name="select" id="first-select" tabindex="0">
               <option value="">Москва</option>
               <option>Казань</option>
               <option>Уфа</option>
@@ -111,7 +118,7 @@
           <nav class="header__bot-nav">
             <ul class="header__bot-list list-reset">
               <li class="header__bot-list-item">
-                <a class="item-link-bot" href="catalog.html" target="_blank">Каталог</a>
+                <a class="item-link-bot black-link" href="catalog.html" target="_blank">Каталог</a>
               </li>
               <li class="header__bot-list-item">
                 <a class="item-link-bot black-link" href="#">Магазины</a>
@@ -317,7 +324,7 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Кресло велюровое
-                      <span>&laquo;X-24&raquo;</span>
+                      <span>&#8220;X-24&#8221;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -325,7 +332,7 @@
                     <span class="old">24&nbsp;990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">&mdash;&nbsp;9000</span>
+                <span class="special-price__discount">- 9&nbsp;000</span>
                 <button class="special-price__btn my-btn transp-btn">Купить</button>
               </article>
             </li>
@@ -340,7 +347,7 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Диван тканевый
-                      <span>&laquo;Z-44&raquo;</span>
+                      <span>&#8220;Z-44&#8221;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -348,7 +355,7 @@
                     <span class="old">32&nbsp;990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">&mdash;&nbsp;10000</span>
+                <span class="special-price__discount">- 10&nbsp;000</span>
                 <button class="special-price__btn my-btn transp-btn">Купить</button>
               </article>
             </li>
@@ -363,7 +370,7 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Будильник
-                      <span>&laquo;Quartz-23&raquo;</span>
+                      <span>&#8220;Quartz-23&#8221;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -371,7 +378,7 @@
                     <span class="old">1&nbsp;890 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">&mdash;&nbsp;600</span>
+                <span class="special-price__discount">- 600</span>
                 <button class="special-price__btn my-btn transp-btn">Купить</button>
               </article>
             </li>
@@ -386,7 +393,7 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Мини-скульптура
-                      <span>&laquo;Oh&nbsp;my&nbsp;deer&raquo;</span>
+                      <span>&#8220;Oh&nbsp;my&nbsp;deer&#8221;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -394,7 +401,7 @@
                     <span class="old">990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">&mdash;&nbsp;300</span>
+                <span class="special-price__discount">- 300</span>
                 <button class="special-price__btn my-btn transp-btn" tabindex="-1">Купить</button>
               </article>
             </li>
@@ -409,7 +416,7 @@
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
                       Диван вел-флок
-                      <span>&laquo;Z-85&raquo;</span>
+                      <span>&#8220;Z-85&#8221;</span>
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -417,7 +424,7 @@
                     <span class="old">32&nbsp;990 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">&mdash;&nbsp;10000</span>
+                <span class="special-price__discount">- 10&nbsp;000</span>
                 <button class="special-price__btn my-btn transp-btn" tabindex="-1">Купить</button>
               </article>
             </li>
@@ -430,7 +437,7 @@
                 <div class="special-price__text">
                   <h3 class="special-price__subtitle">
                     <a class="special-price__link black-link" href="#">
-                      Термометр + гидрометр &laquo;H-18&raquo;
+                      Термометр + гидрометр &#8220;H-18&#8221;
                     </a>
                   </h3>
                   <div class="special-price__price">
@@ -438,7 +445,7 @@
                     <span class="old">2&nbsp;090 руб</span>
                   </div>
                 </div>
-                <span class="special-price__discount">&mdash;&nbsp;700</span>
+                <span class="special-price__discount">- 700</span>
                 <button class="special-price__btn my-btn transp-btn" tabindex="-1">Купить</button>
               </article>
             </li>
@@ -471,7 +478,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван кожаный
-                    <span>&laquo;R-94&raquo;</span>
+                    <span>&#8220;R-94&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -501,7 +508,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван апартековый
-                    <span>&laquo;T-75&raquo;</span>
+                    <span>&#8220;T-75&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -531,7 +538,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван тканевый
-                    <span>&laquo;D-31&raquo;</span>
+                    <span>&#8220;D-31&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -561,7 +568,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван велюровый
-                    <span>&laquo;Y-68&raquo;</span>
+                    <span>&#8220;Y-68&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -591,7 +598,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван из&nbsp;шинила
-                    <span>&laquo;W-95&raquo;</span>
+                    <span>&#8220;W-95&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -621,7 +628,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван флоковый
-                    <span>&laquo;G-41&raquo;</span>
+                    <span>&#8220;G-41&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -651,7 +658,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван шиниловый
-                    <span>&laquo;V-43&raquo;</span>
+                    <span>&#8220;V-43&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -681,7 +688,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван велюровый
-                    <span>&laquo;S-99&raquo;</span>
+                    <span>&#8220;S-99&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -711,7 +718,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван флоковый
-                    <span>&laquo;H-64&raquo;</span>
+                    <span>&#8220;H-64&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -740,7 +747,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван флоковый
-                    <span>&laquo;H-58&raquo;</span>
+                    <span>&#8220;H-58&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -769,7 +776,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван из&nbsp;кожзама
-                    <span>&laquo;R-43&raquo;</span>
+                    <span>&#8220;R-43&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -798,7 +805,7 @@
                 <h3 class="high-rating__subtitle">
                   <a class="high-rating__link black-link" href="#">
                     Диван из&nbsp;шинила
-                    <span>&laquo;C-42&raquo;</span>
+                    <span>&#8220;C-42&#8221;</span>
                   </a>
                 </h3>
                 <div class="high-rating__price">
@@ -819,20 +826,20 @@
 
 
     <section class="oxford">
-      <div class="oxford__common">
-        <div class="container oxford__container">
-          <h2 class="oxford__title">
-            Оксфорд 1950
-          </h2>
-          <p class="oxford__text">
-            Новая коллекция
-            <span>изысканных кресел</span>
-          </p>
-          <a class="oxford__btn my-btn purple-btn" href="#">
-            Ознакомиться
-          </a>
-        </div>
+      <!-- <div class="oxford__common"> -->
+      <div class="container oxford__container">
+        <h2 class="oxford__title">
+          Оксфорд 1950
+        </h2>
+        <p class="oxford__text">
+          Новая коллекция
+          <span>изысканных кресел</span>
+        </p>
+        <a class="oxford__btn my-btn purple-btn" href="#">
+          Ознакомиться
+        </a>
       </div>
+      <!-- </div> -->
     </section>
 
 
@@ -1104,7 +1111,7 @@
                   <br>
                   интернет-аналитики выводы представляют собой не&nbsp;что иное?
                 </p>
-                <a class="useful__link my-btn transp-btn hvr-shutter-in-horizontal" href="#">Читать</a>
+                <a class="useful__link my-btn transp-btn hvr-shutter-in-vertical" href="#">Читать</a>
               </div>
             </li>
 
@@ -1116,7 +1123,7 @@
                   <br>
                   приносят несомненную пользу обществу?
                 </p>
-                <a class="useful__link my-btn transp-btn" href="#">Читать</a>
+                <a class="useful__link my-btn transp-btn hvr-shutter-in-vertical" href="#">Читать</a>
               </div>
             </li>
 
@@ -1128,7 +1135,7 @@
                   <br>
                   и&nbsp;развитие внутренней структуры?
                 </p>
-                <a class="useful__link my-btn transp-btn" href="#" tabindex="-1">Читать</a>
+                <a class="useful__link my-btn transp-btn hvr-shutter-in-vertical" href="#" tabindex="-1">Читать</a>
               </div>
             </li>
 
@@ -1142,7 +1149,7 @@
                   <br>
                   необходимость распределения?
                 </p>
-                <a class="useful__link my-btn transp-btn" href="#" tabindex="-1">Читать</a>
+                <a class="useful__link my-btn transp-btn hvr-shutter-in-vertical" href="#" tabindex="-1">Читать</a>
               </div>
             </li>
 
@@ -1154,7 +1161,7 @@
                   <br>
                   приносят несомненную пользу обществу?
                 </p>
-                <a class="useful__link my-btn transp-btn" href="#" tabindex="-1">Читать</a>
+                <a class="useful__link my-btn transp-btn hvr-shutter-in-vertical" href="#" tabindex="-1">Читать</a>
               </div>
             </li>
 
@@ -1174,23 +1181,28 @@
           Безусловно, новая модель организационной деятельности в&nbsp;значительной степени
           <br>
           обусловливает важность распределения внутренних резервов и&nbsp;ресурсов.
-          <button class="contacts__tooltip my-btn">
-
+          <button class="contacts__tooltip my-btn js-tooltip"
+            data-tippy-content="Реплицированные с зарубежных источников, исследования формируют глобальную сеть."
+            aria-label="Пометка">
+            <span>?</span>
           </button>
         </p>
 
         <form class="contacts__form" action="#">
 
           <label class="contacts__label" for="text">
-            <input class="contacts__input input-text" type="text" id="text" placeholder="Как Вас зовут?">
+            <input class="contacts__input input-text" type="text" id="text" placeholder="Как Вас зовут?"
+              data-validate-field="name">
           </label>
 
           <label class="contacts__label" for="tel">
-            <input class="contacts__input input-tel" type="tel" id="tel" placeholder="Ваш телефон">
+            <input class="contacts__input input-tel" type="tel" id="tel" placeholder="Ваш телефон"
+              data-validate-field="tel" data-validate-rules="phone">
           </label>
 
           <label class="contacts__label" for="email">
-            <input class="contacts__input input-email" type="email" id="email" placeholder="Ваш e-mail">
+            <input class="contacts__input input-email" type="email" id="email" placeholder="Ваш e-mail"
+              data-validate-field="mail">
           </label>
 
           <button class="contacts__btn my-btn purple-btn hvr-rectangle-out">
@@ -1202,7 +1214,7 @@
               aria-label="Нажмите, если принимаете пользовательское соглашение">
             <span>
               Принимаю
-              <a href="#" aria-label="Нажмите чтобы прочитать пользовательское соглашение">
+              <a class="rules-link" href="#" aria-label="Нажмите чтобы прочитать пользовательское соглашение">
                 пользовательское соглашение
               </a>
             </span>
@@ -1217,7 +1229,7 @@
     <div class="container footer__container">
       <div class="footer__top">
         <div class="footer__picture">
-          <a class="footer__logo" aria-label="Логотип">
+          <a class="footer__logo" aria-label="Логотип" tabindex="-1">
 
             <img src="img/footer-logo.webp" alt="Логотип магазина SDP">
 
@@ -1292,7 +1304,7 @@
               </li>
             </ul>
 
-            <ul class="footer__lists-right-collab list-three list-reset">
+            <ul class="footer__lists-right-collab list-four list-reset">
               <li class="collab-list-item footer__list-item">
                 <a class="footer__link black-link" href="#">Сотрудничество</a>
               </li>
