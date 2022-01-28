@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SDP - Каталог</title>
+  <title>SDP - Поставщикам</title>
   <link rel="shortcut icon" href="img/favicon.png">
 
   <!-- fonts -->
@@ -19,13 +19,30 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 
   <!-- hover-btn -->
-  <link rel="stylesheet" href="css/hover-min.css">
+  <!-- <link rel="stylesheet" href="css/hover-min.css"> -->
 
   <!-- tooltips -->
   <!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" /> -->
 
   <!-- my-styles -->
   <link rel="stylesheet" href="css/main.min.css">
+
+
+
+  <!-- scripts -->
+  <!-- swiper -->
+  <!-- <script defer src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
+  <!-- tooltips -->
+  <!-- <script defer src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script> -->
+  <!-- <script defer src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script> -->
+
+  <!-- choices -->
+  <script defer src="js/choices.min.js"></script>
+
+  <!-- my-JS -->
+  <script defer src="js/main.js"></script>
+
 </head>
 
 <body>
@@ -68,12 +85,10 @@
               <a class="header__item-link grey-link" href="#" aria-label="О компании">О&nbsp;компании</a>
             </li>
             <li class="header__top-list-item">
-              <a class="header__item-link grey-link" href="#" aria-label="Гарантия и возврат">Гарантия
-                и&nbsp;возврат</a>
+              <a class="header__item-link grey-link" href="#" aria-label="Гарантия и возврат">Гарантия и&nbsp;возврат</a>
             </li>
             <li class="header__top-list-item">
-              <a class="header__item-link grey-link" href="#" aria-label="Корпоративным клиентам">Корпоративным
-                клиентам</a>
+              <a class="header__item-link grey-link" href="#" aria-label="Корпоративным клиентам">Корпоративным клиентам</a>
             </li>
             <li class="header__top-list-item">
               <a class="header__item-link grey-link" href="#" aria-label="Дизайн-решение">Дизайн-решение</a>
@@ -149,7 +164,7 @@
           </div>
 
           <div class="choices-2">
-            <select class="header__bot-select multi-default category-select" name="select" id="second-select">
+            <select class="header__bot-select multi-default category-select category-select-partnership" name="select" id="second-select">
               <option value="">Категория</option>
               <option>Диваны</option>
               <option>Кресла</option>
@@ -182,82 +197,172 @@
   </header>
 
   <main>
-
-
-    <section class="catalog">
-      <div class="container catalog__container">
-        <div class="catalog__content">
-          <div class="catalog__links">
-            <ul class="catalog__list list-reset">
+    <section class="partnership">
+      <div class="container partnership__container">
+        <div class="partnership__content">
+          <div class="partnership__links">
+            <ul class="partnership__list list-reset">
               <li class="list-item">
                 <a class="item-link grey-link" href="index.html" aria-label="На главную">
                   Главная
                 </a>
               </li>
               <li class="list-item">
-                <a class="item-link grey-link" href="catalog.html" aria-label="Каталог">
-                  Каталог
-                </a>
-              </li>
-              <li class="list-item">
-                <a class="item-link grey-link" href="#" aria-label="Диваны">
-                  Диваны
-                </a>
-              </li>
-              <li class="list-item">
-                <a class="item-link grey-link link-active" href="#" aria-label="Прямые диваны">
-                  Прямые диваны
+                <a class="item-link grey-link link-active" href="partnership.html" aria-label="Партнёрам">
+                  Сотрудничество
                 </a>
               </li>
             </ul>
           </div>
-          <h2 class="catalog__title title">
-            Каталог
-          </h2>
-
-          <!-- tabs -->
-          <!-- tabs -->
-          <!-- tabs -->
-
-          <div class="we-work__consult">
-            <!-- элементы табов -->
-
-            <div class="tabs-item tabs-item--active" data-target="one">
-              Контент
-            </div>
-
-            <div class="tabs-item" data-target="two">
-              Подъехал
-            </div>
-
-
-            <ul class="we-work__list list-reset flex">
-              <li class="we-work__list-item">
-                <button class="item-text-btn tabs-nav__btn--active" aria-label="Первый шаг" data-path="one">
-                  1
-                </button>
-              </li>
-              <li class="we-work__list-item">
-                <button class="item-text-btn" aria-label="Второй шаг" data-path="two">
-                  2
-                </button>
-              </li>
-            </ul>
-
-
-            <!-- tabs -->
-            <!-- tabs -->
-            <!-- tabs -->
-
+          <h1 class="partnership__title title">
+            Сотрудничество
+          </h1>
+          <div class="partnership__suppliers">
+            <h2 class="partnership__subtitle subtitle">
+              Поставщикам
+            </h2>
+            <p class="partnership__text">
+              При планировании обстановки торгового помещения важно обустроить его с&nbsp;комфортом для покупателей:
+              грамотно
+              зонировать, обеспечить эффективную демонстрацию и&nbsp;хранение товаров в&nbsp;зале. Если вам необходимо
+              комплексное
+              оснащение, организация зоны отдыха или отдельные предметы меблировки для поддержания эффективной торговой
+              деятельности, мы&nbsp;поможем выбрать продукцию с&nbsp;учетом нагрузки от&nbsp;поступающего трафика.
+            </p>
           </div>
 
 
+          <div class="partnership__get get">
+            <h2 class="partnership__subtitle subtitle">
+              Что вы получаете?
+            </h2>
+            <ul class="get-list list-reset">
+              <li class="get-list-item">
+
+                <!-- <svg class="network" width="25" height="25">
+                  <use xlink:href="img/sprite.svg#network"></use>
+                </svg> -->
+
+                <p class="partnership__text get-text">
+                  Мы&nbsp;ценим идеи и&nbsp;вдохновение и&nbsp;предлагаем сотрудничество
+                  <br>
+                  талантливым дизайнерам и&nbsp;архитекторам. Выпускаемая нами продукция гармонично дополнит любой
+                  современный проект.
+                </p>
+              </li>
+              <li class="get-list-item">
+
+                <!-- <svg class="briefcase" width="25" height="25">
+                  <use xlink:href="img/sprite.svg#briefcase"></use>
+                </svg> -->
+
+                <p class="partnership__text get-text">
+                  Комплексное решение для красивого и&nbsp;функционального обустройства любых пространств.
+                </p>
+              </li>
+              <li class="get-list-item">
+
+                <!-- <svg class="git-pull-request" width="25" height="25">
+                  <use xlink:href="img/sprite.svg#git-pull-request"></use>
+                </svg> -->
+
+                <p class="partnership__text get-text">
+                  В&nbsp;ассортименте представлены все товарные группы для того, чтобы воссоздать обстановку
+                  в&nbsp;помещениях разных типов: кабинетах,
+                  <br>
+                  смешанных пространствах, Open Space, гостевых и&nbsp;переговорных комнатах.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="partnership__benefits benefits">
+            <h2 class="partnership__subtitle subtitle">
+              Ваши преимущества от сотрудничества
+            </h2>
+            <ul class="benefits-list list-reset">
+              <li class="benefits-list-item">
+                <span class="partnership__span">
+                  Возможность 1:
+                </span>
+                <p class="partnership__text">
+                  Создавайте незабываемые впечатления. Красиво меблированная фотостудия не&nbsp;оставит клиентов
+                  равнодушными, а&nbsp;созданная интерьером атмосфера будет надолго запечатлена на&nbsp;их&nbsp;снимках.
+                  Стильная и&nbsp;разноплановая обстановка творческого пространства&nbsp;- ключевая составляющая
+                  его
+                  успешной деятельности. Позаботьтесь о&nbsp;людях в&nbsp;кадре, а&nbsp;мы&nbsp;поможем правильно
+                  выбрать
+                  мебель.
+                </p>
+              </li>
+              <li class="benefits-list-item">
+                <span class="partnership__span">
+                  Возможность 2:
+                </span>
+                <p class="partnership__text">
+                  Мы&nbsp;предлагаем застройщикам, работающим на&nbsp;территории&nbsp;РФ, участие наших специалистов
+                  от&nbsp;этапа проектирования обстановки квартир и&nbsp;подбора комплексных интерьерных решений
+                  до&nbsp;оптовых поставок мебели. Поможем организовать демонстрационный зал с&nbsp;образцами изделий
+                  и&nbsp;материалов на&nbsp;площади нового здания, чтобы покупатель заблаговременно подобрал тот вариант
+                  меблировки, который удовлетворит даже самые взыскательные ожидания.
+                </p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="partnership__guarantees guarantees">
+            <h2 class="partnership__subtitle subtitle">
+              Гарантии
+            </h2>
+            <ol class="guarantees-list">
+              <li class="guarantees-list-item">
+                <p class="partnership__text">
+                  При приемке товара Покупатель должен внимательно проверить его количество, качество и ассортимент
+                  на&nbsp;соответствие сопроводительным документам и&nbsp;заказу. После подписания товарного чека
+                  Покупатель
+                  утрачивает право предъявления претензий, которые можно выявить при приемке товара.
+                </p>
+              </li>
+              <li class="guarantees-list-item">
+                <p class="partnership__text">
+                  На&nbsp;товары, сборка которых производилась покупателем самостоятельно (не&nbsp;специалистами
+                  <br>
+                  Продавца), гарантийные обязательства Продавца не&nbsp;распространяются. Также гарантия
+                  не распространяется
+                  на&nbsp;повреждения товара, полученные в&nbsp;ходе самостоятельной доставки и&nbsp;подъема товара.
+                  Покупатель не&nbsp;вправе отказаться от&nbsp;товара надлежащего качества, имеющего
+                  <br>
+                  индивидуально-определенные свойства, т.е. если товар может быть использован исключительно
+                  приобретающим
+                  его потребителем.
+                </p>
+              </li>
+              <li class="guarantees-list-item">
+                <p class="partnership__text">
+                  Возврат или обмен товара возможен при условии, что сохранена упаковка, товарный вид
+                  и потребительские
+                  свойства товара, а&nbsp;также товарный и&nbsp;кассовый чеки. В&nbsp;этом случае мы&nbsp;гарантируем
+                  вам
+                  возврат полной стоимости товара (за&nbsp;вычетом стоимости доставки). В&nbsp;случае отказа
+                  от&nbsp;товара
+                  при доставке, клиент оплачивает услуги доставки.
+                </p>
+              </li>
+            </ol>
+            <div class="partnership__term term">
+              <img src="img/pencil.webp" alt="Картинка карандаш">
+              <p class="partnership__text text">
+                Срок гарантии на&nbsp;нашу мебель составляет
+                <br>
+                от&nbsp;18&nbsp;до&nbsp;60&nbsp;месяцев
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-
   </main>
+
 
   <footer class="footer">
     <div class="container footer__container">
@@ -298,8 +403,7 @@
           <div class="footer__lists-left footer-list">
             <ul class="footer__list-left-about list-one list-reset">
               <li class="about-list-item footer__list-item">
-                <a class="footer__link black-link" style="pointer-events: none;" href="#"
-                  aria-label="О нас">О&nbsp;нас</a>
+                <a class="footer__link black-link" href="#" style="pointer-events: none;" aria-label="О нас">О&nbsp;нас</a>
               </li>
               <li class="about-list-item footer__list-item">
                 <a class="footer__link grey-link" href="#" aria-label="О компании">О&nbsp;компании</a>
@@ -311,7 +415,7 @@
 
             <ul class="footer__list-left-services list-two list-reset">
               <li class="services-list-item footer__list-item">
-                <a class="footer__link black-link" style="pointer-events: none;" href="#" aria-label="Услуги">Услуги</a>
+                <a class="footer__link black-link" href="#" style="pointer-events: none;" aria-label="Услуги">Услуги</a>
               </li>
               <li class="services-list-item footer__list-item">
                 <a class="footer__link grey-link" href="#" aria-label="Доставка">Доставка</a>
@@ -327,8 +431,7 @@
           <div class="footer__lists-right footer-list">
             <ul class="footer__lists-right-contact list-three list-reset">
               <li class="contact-list-item footer__list-item">
-                <a class="footer__link black-link" style="pointer-events: none;" href="#"
-                  aria-label="Связь с нами">Связь с&nbsp;нами</a>
+                <a class="footer__link black-link" href="#" style="pointer-events: none;" aria-label="Связь с нами">Связь с&nbsp;нами</a>
               </li>
               <li class="contact-list-item footer__list-item">
                 <a class="footer__link grey-link" href="#" aria-label="Обратная связь">Обратная связь</a>
@@ -340,8 +443,7 @@
 
             <ul class="footer__lists-right-collab list-four list-reset">
               <li class="collab-list-item footer__list-item">
-                <a class="footer__link black-link" style="pointer-events: none;" href="#"
-                  aria-label="Сотрудничество">Сотрудничество</a>
+                <a class="footer__link black-link" href="#" style="pointer-events: none;" aria-label="Сотрудничество">Сотрудничество</a>
               </li>
               <li class="collab-list-item footer__list-item">
                 <a class="footer__link grey-link" href="partnership.html" target="_blank"
@@ -365,14 +467,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- scripts -->
-
-  <!-- choices -->
-  <!-- <script src="js/choices.min.js"></script> -->
-
-  <!-- my-JS -->
-  <script src="js/main.js"></script>
 
 
 </body>

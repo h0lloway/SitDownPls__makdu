@@ -43,10 +43,10 @@ const UsefulSwiper = new Swiper('.useful__swiper', {
   // Optional parameters
   // direction: 'vertical',
   // loop: true,
-  grid: {
-    rows: 1,
-    fill: "row"
-  },
+  // grid: {
+  //   rows: 1,
+  //   fill: "row"
+  // },
 
   // Navigation arrows
   navigation: {
@@ -111,37 +111,7 @@ OpenBtn.addEventListener("click", function () {
   });
 });
 
-
-// choices // choices // choices // choices // choices // choices // choices // choices // choices 
-
-
-const multiDefault = () => {
-  const elements = document.querySelectorAll('.multi-default');
-  elements.forEach(el => {
-    const choices = new Choices(el, {
-      searchEnabled: false,
-
-    });
-  });
-}
-
-multiDefault();
-
-
-// var e = document.querySelector(".region-select"),
-//   c = (new Choices(e, {
-//     searchEnabled: !1
-//   }), document.querySelector(".category-select"));
-// new Choices(c, {
-//   searchEnabled: !1,
-//   classNames: {
-//     containerOuter: "choices-2"
-//   }
-// });
-
-
-// just validate/ inputmask
-
+// just validate
 
 var selector = document.querySelector("input[type='tel']");
 var im = new Inputmask("+7 (999)-999-99-99");
@@ -193,48 +163,7 @@ new JustValidate('.contacts__form', {
   }
 });
 
-
-
-
-
-// new JustValidate('.contacts__form', {
-//   colorWrong: '#FF3030',
-//   rules: {
-//     name: {
-//       required: true,
-//       minLength: 2,
-//       maxLength: 30
-//     },
-//     mail: {
-//       required: true,
-//     },
-//   },
-//   messages: {
-//     name: {
-//       required: 'Недопустимый формат',
-//     },
-//     mail: {
-//       required: 'Недопустимый формат',
-//     },
-//   },
-
-//   // submitHandler: function (form) {
-//   //   let formData = new FormData(form);
-
-//   //   fetch('mail.php', {
-//   //     method: 'POST',
-//   //     body: formData
-//   //   }).then(() => {
-//   //     console.log('Отправлено');
-//   //     form.reset();
-//   //   })
-//   //     .catch(() => console.log('Ошибка'))
-//   // }
-// });
-
-
-
-// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips// tooltips
+// tippy
 
 
 tippy('.js-tooltip', {
@@ -254,3 +183,7 @@ tippy('.js-tooltip', {
   // trigger: 'focus',
   maxWidth: 250
 });
+
+
+// табы
+

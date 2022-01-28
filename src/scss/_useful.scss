@@ -54,6 +54,10 @@
     background-color: #f7f7f7;
   }
 
+  &__swiper-slide:last-child {
+    margin-right: 0;
+  }
+
   &__swiper-slide:nth-child(1),
   &__swiper-slide:nth-child(2),
   &__swiper-slide:nth-child(3),

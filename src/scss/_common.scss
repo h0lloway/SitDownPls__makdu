@@ -290,3 +290,42 @@ body {
 .black-link:active {
   color: #7033AC;
 }
+
+
+
+// общие стили для переходам по дереву ссылок
+
+.partnership__list,
+.catalog__list {
+  display: flex;
+}
+
+.list-item:not(:last-child) {
+  margin-right: 7px;
+}
+
+.item-link {
+  position: relative;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 1px 4px;
+  transition: all .3s ease-in-out;
+}
+
+.item-link::before {
+  content: '/';
+  position: absolute;
+  right: -8px;
+  top: 4px;
+  margin-left: 10px;
+}
+
+.link-active {
+  color: var(--purple-color);
+  margin-right: 0;
+  padding: 1px 4px;
+}
+
+.link-active::before {
+  content: '';
+}
