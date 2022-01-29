@@ -134,11 +134,11 @@ const scripts = () => {
       './src/js/components/**/*.js',
       './src/js/main.js'
   ])
-      .pipe(sourcemaps.init())
-      .pipe(babel({
-          presets: ['@babel/env']
-      }))
-      .pipe(concat('main.js'))
+      // .pipe(sourcemaps.init())
+      // .pipe(babel({
+      //     presets: ['@babel/env']
+      // }))
+      // .pipe(concat('main.js'))
       .pipe(sourcemaps.write())
       .pipe(dest('./dev/js'))
       .pipe(browserSync.stream())

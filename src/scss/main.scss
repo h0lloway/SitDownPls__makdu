@@ -161,34 +161,363 @@
 .catalog {
 
   padding-top: 20px;
+  padding-bottom: 70px;
 
 
   &__links {
-    margin-bottom: 20px
+    margin-bottom: 32px
+  }
+
+  &__content {
+    display: flex;
+
+    .catalog__content-left {
+      width: 300px;
+      margin-right: 30px;
+    }
+
+    .catalog__content-right {
+      width: 75%;
+
+      .title {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+
+        color: var(--black-color);
+      }
+    }
+  }
+
+  &__btn {
+    margin-left: 15px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: var(--black-color);
+  }
+
+  &__furnitures {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .form-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    color: #666;
+    margin-bottom: 11px;
+  }
+
+  .catalog__label {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #666;
+    margin-bottom: 11px;
+    cursor: pointer;
+    width: max-content;
+  }
+
+  .catalog__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+    opacity: 0;
+  } 
+
+  .catalog__label span {
+    position: relative;
+    padding-left: 32px;
+  }
+
+  .catalog__label span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #666;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+  }
+
+  .catalog__label span::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 8px;
+    height: 13px;
+    border-right: 2px solid var(--white-color);
+    border-bottom: 2px solid var(--white-color);
+    opacity: 0;
+    transform: rotate(45deg);
+    transition: all .2s ease-in-out;
+  }
+
+  .catalog__input:checked+span:before {
+    background: #A65CF0;
+  }
+
+  .catalog__input:checked+span::after {
+    opacity: 1;
+  }
+
+  &__tabs-item {
+    display: none;
+  }
+
+  &__tabs-item {
+    grid-template-columns: repeat(3,minmax(200px,296px));
+    grid-template-rows: auto;
+    gap: 32px;
+  }
+
+  .tab-active {
+    display: grid;
+
+    animation: fadeIn;
+    animation-duration: .5s;
+  }
+
+  @keyframes fadeIn {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  &__btn-switch {
+    padding: 6px 10px;
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid #7033AC;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 16px;
+  
+    color: #7033AC;
+    transition: all .3s ease;
+  }
+
+  &__btn-switch:hover {
+    border-color: #A65CF0;
+    background-color: #A65CF0;
+    color: var(--white-color);
+  }
+  
+  &__btn-switch:focus-visible {
+    border-color: #A65CF0;
+    background: #C998FB;
+    color: var(--white-color);
+  }
+
+  &__btn-switch:active {
+    border-color: #7033AC;
+    background: #7033AC;
+    color: var(--white-color);
+  }
+
+  .tab-btn-active {
+    background: #7033AC;
+    color: var(--white-color);
+  }
+  
+  &__btn-list {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 32px;
+    width: max-content;
+  }
+
+  &__btn-list-item:nth-child(1) {
+    margin-right: 15px;
+    margin-left: 3px;
+  }
+
+  .rating {
+    width: 15.79px;
+    height: 15px;
+
+    fill: #FF862F;
+    transition: all .3s ease;
+  }
+
+  .price {
+    font-size: 16px;
+    line-height: 21px;
+    color: #666;
   }
 }
 
-// табы
+.catalog__left-price {
+  margin-bottom: 38px;
 
-
-
-
-
-.tabs-nav__btn--active {
-  color: blue !important;
+  .price-title {
+    margin-bottom: 4px;
+  }
 }
 
-.tabs-item {
-  display: none;
+.catalog__color {
+  margin-top: 13px;
 }
 
-.tabs-item--active {
-  display: block;
+.form-price {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-right: 10px;
+  }
+
+  label:nth-child(1) {
+    margin-right: 69px;
+  }
+
+  &__labelprice {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__labelprice label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .form-price label:nth-child(1) {
+    margin-right: 69px;
+  }
+
+  &__labelprice label span {
+    padding: 0;
+  }
+
+  &__input {
+    position: relative;
+    width: 86px;
+    height: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--black-color);
+    border: 1px solid var(--grey-color);
+    border-radius: 2px;
+    padding-left: 12px;
+    opacity: 1;
+    transition: .2s ease-in-out;
+  }
+
+  // &__slide {
+  //   margin-top: 20px;
+  // }
+
+  .noUi-target {
+    border: none;
+    box-shadow: none;
+    background: #eaeaea;
+  }
+
+  .noUi-horizontal {
+    height: auto;
+  }
+
+  .noUi-base {
+    height: 3px;
+    background-color: #eaeaea;
+    cursor: pointer;
+  }
+
+  .noUi-connect, 
+  .noUi-origin.noUi-state-tap, 
+  .noUi-state-tap {
+    transition: transform .05s;
+  }
+
+  .noUi-connect {
+    background-color: var(--purple-color);
+  }
+
+  .noUi-horizontal .noUi-handle-lower {
+    top: 0;
+    left: 98%;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 14px;
+    border-color: transparent transparent var(--purple-color) transparent;
+    border-radius: 4px;
+    background: 0 0;
+    box-shadow: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+
+  .noUi-horizontal .noUi-handle-upper {
+    top: 0;
+    left: 97%;
+    position: relative;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7.5px 14px;
+    border-color: transparent transparent var(--purple-color) transparent;
+    border-radius: 4px;
+    background: 0 0;
+    box-shadow: none;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+  }
+
+  .noUi-handle::after, 
+  .noUi-handle::before {
+    display: none;
+  }
+
+
+
+
 }
 
-// табы
+
+// range slider
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+
 
 
 
 @import url("normalize.css");
 @import url("hover-min.css");
+@import url("nouislider.min.css");

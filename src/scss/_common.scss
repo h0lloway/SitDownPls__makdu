@@ -329,3 +329,82 @@ body {
 .link-active::before {
   content: '';
 }
+
+
+
+// общие стили для карточек товаров
+
+.common-list {
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-template-rows: auto;
+  gap: 31px 33px;
+  margin-bottom: 33px;
+}
+
+.common-list-item {
+  display: block;
+  background: #F7F7F7;
+  border-radius: 10px;
+}
+
+.common-product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 27px 15px 30px;
+}
+
+.common-rating {
+  position: relative;
+  top: 5px;
+  left: 16px;
+
+  font-size: 16px;
+  line-height: 21px;
+  color: #FF862F;
+}
+
+.common-img {
+  position: relative;
+  max-width: 272px;
+  height: 143px;
+  margin-bottom: 18px;
+}
+
+.common-img img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 100%;
+  transform: translateX(-50%);
+}
+
+.common-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 0 10px 0 16px;
+    margin-bottom: 24px;
+}
+
+.common-subtitle {
+  flex: 1 1 auto;
+  margin-bottom: 21px;
+}
+
+.common-link {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 31px;
+  color: #333;
+  transition: .2s ease-in-out;
+}
+
