@@ -58,6 +58,7 @@ html {
   --cacaca-color: #cacaca;
   --e9e9e9-color: #e9e9e9;
   --grey-color: #999;
+  --dark-grey: #666;
 }
 
 *,
@@ -266,30 +267,16 @@ body {
 
 // серые и черные ссылки // серые и черные ссылки // серые и черные ссылки
 
-.grey-link {
-  font-size: 14px;
-  color: var(--grey-color);
-}
-.black-link{
-  font-size: 16px;
-  color: var(--black-color);
-}
+.grey-link {font-size: 14px;color: var(--grey-color);}
+.black-link{font-size: 16px;color: var(--black-color);}
 
 .grey-link:hover,
-.black-link:hover {
-  color: var(--purple-color);
-}
+.black-link:hover {color: var(--purple-color);}
 
 .grey-link:focus-visible,
-.black-link:focus-visible {
-  color: #7033AC;
-  background: #EBD1FF;
-}
+.black-link:focus-visible {color: #7033AC;background: #EBD1FF;}
 
-.grey-link:active,
-.black-link:active {
-  color: #7033AC;
-}
+.grey-link:active,.black-link:active {color: #7033AC;}
 
 
 
@@ -344,7 +331,7 @@ body {
 
 .common-list-item {
   display: block;
-  background: #F7F7F7;
+  background: var(--f7f7f7-color);
   border-radius: 10px;
 }
 
@@ -354,7 +341,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  background-color: #f7f7f7;
+  background-color: var(--f7f7f7-color);
   border-radius: 10px;
   padding: 27px 15px 30px;
 }
@@ -366,7 +353,7 @@ body {
 
   font-size: 16px;
   line-height: 21px;
-  color: #FF862F;
+  color: var(--orange-color);
 }
 
 .common-img {
@@ -404,7 +391,7 @@ body {
   font-weight: 400;
   font-size: 24px;
   line-height: 31px;
-  color: #333;
-  transition: .2s ease-in-out;
+  color: var(--black-color);
+  transition: all .3s ease-in-out;
 }
 

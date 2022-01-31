@@ -7,7 +7,7 @@ if (rangeSlider) {
     step: 1,
     range: {
       'min': [0],
-      'max': [250000]
+      'max': [200000]
     }
   });
 
