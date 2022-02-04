@@ -1,4 +1,5 @@
 # SitDownPls__makdu - промежуточный репозиторий, работа не готова, **только десктоп**
+ссылка: http://sitdownpls.makdu-skillbox.tmweb.ru/
 
 
 Странички с контентом:
