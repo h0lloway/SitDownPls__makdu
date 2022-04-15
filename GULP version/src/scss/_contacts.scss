@@ -152,3 +152,22 @@
     }
   }
 }
+
+@media (max-width: 650px) {
+
+  .contacts {
+    padding-bottom: 47px;
+
+    &__container {
+      background-image: none;
+    }
+
+    &__form {
+      width: 296px;
+    }
+
+    &__text {
+      width: 100%;
+    }
+  }
+}

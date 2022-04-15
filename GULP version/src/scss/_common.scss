@@ -39,8 +39,8 @@
 }
 
 html {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -146,12 +146,20 @@ body {
 
 .title {
   margin-bottom: 24px;
-  
+
   font-weight: 400;
   font-size: 32px;
   line-height: 32px;
 
   color: var(--black-color);
+}
+
+@media (max-width: 600px) {
+  .title {
+    margin-bottom: 26px;
+    font-size: 24px;
+    line-height: 24px;
+  }
 }
 
 // прозрачная кнопка // прозрачная кнопка // прозрачная кнопка // прозрачная кнопка // прозрачная кнопка 
@@ -267,16 +275,31 @@ body {
 
 // серые и черные ссылки // серые и черные ссылки // серые и черные ссылки
 
-.grey-link {font-size: 14px;color: var(--grey-color);}
-.black-link{font-size: 16px;color: var(--black-color);}
+.grey-link {
+  font-size: 14px;
+  color: var(--grey-color);
+}
+
+.black-link {
+  font-size: 16px;
+  color: var(--black-color);
+}
 
 .grey-link:hover,
-.black-link:hover {color: var(--purple-color);}
+.black-link:hover {
+  color: var(--purple-color);
+}
 
 .grey-link:focus-visible,
-.black-link:focus-visible {color: #7033AC;background: #EBD1FF;}
+.black-link:focus-visible {
+  color: #7033AC;
+  background: #EBD1FF;
+}
 
-.grey-link:active,.black-link:active {color: #7033AC;}
+.grey-link:active,
+.black-link:active {
+  color: #7033AC;
+}
 
 
 
@@ -379,11 +402,11 @@ body {
 }
 
 .common-text {
-    display: flex;
-    flex-direction: column;
-    flex: 1 1 auto;
-    padding: 0 10px 0 16px;
-    margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 0 10px 0 16px;
+  margin-bottom: 24px;
 }
 
 .common-subtitle {
@@ -558,5 +581,17 @@ body {
 @media (max-width: 800px) {
   .container {
     padding: 0 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 12px;
   }
 }
