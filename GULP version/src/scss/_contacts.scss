@@ -13,11 +13,12 @@
   }
 
   &__text {
+    margin-bottom: 15px;
+
     font-size: 14px;
     line-height: 19px;
     color: var(--grey-color);
     width: 50%;
-    margin-bottom: 16px;
   }
 
   &__tooltip {
@@ -153,17 +154,17 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
 
   .contacts {
-    padding-bottom: 47px;
+    padding-bottom: 68px;
 
     &__container {
       background-image: none;
     }
 
     &__form {
-      width: 296px;
+      width: 100%;
     }
 
     &__text {

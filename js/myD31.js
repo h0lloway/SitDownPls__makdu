@@ -1,5 +1,5 @@
 const d31Swiper = new Swiper('.d31__swiper', {
-  slidesPerGroup: 4,
+  slidesPerGroup: 1,
   slidesPerView: "auto",
   speed: 900,
   // setWrapperSize: false,

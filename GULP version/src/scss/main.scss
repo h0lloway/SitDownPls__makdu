@@ -1,6 +1,5 @@
 @import "reset";
 @import "common";
-
 @import "header";
 @import "hero";
 @import "special-price";
@@ -10,13 +9,9 @@
 @import "useful";
 @import "contacts";
 @import "footer";
-
-
 @import "partnership";
 @import "catalog";
 @import "D31";
-
-
 
 
 .disable-scroll {
@@ -29,14 +24,13 @@
   width: 100%;
 }
 
-
 .modal-overlay {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   display: flex;
   align-items: center;
@@ -173,8 +167,6 @@
 .modal--1 {
   max-width: 624px;
   padding: 30px;
-
-
   border-radius: 10px;
 }
 
@@ -183,16 +175,13 @@
   font-weight: 400;
   font-size: 32px;
   line-height: 32px;
-
   color: var(--black-color);
 }
 
 .modal-text {
   margin-bottom: 30px;
-
   font-size: 14px;
   line-height: 19px;
-
   color: var(--black-color);
 }
 
@@ -208,18 +197,10 @@
   position: absolute;
   top: -35px;
   left: 17px;
-
   font-size: 12px;
   line-height: 16px;
 }
 
 
-
-
-
-
-
-
-
+@import "nouislider";
 @import url("hover-min.css");
-@import url("nouislider.min.css");

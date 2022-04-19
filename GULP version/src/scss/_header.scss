@@ -810,6 +810,15 @@
       .choices__list--dropdown {
         width: 100%;
       }
+
+      .choices__list {
+        display: block;
+      }
+
+      .choices__list--dropdown .choices__item,
+      .choices__list[aria-expanded] .choices__item {
+        padding: 4px;
+      }
     }
   }
 }
@@ -955,5 +964,13 @@
       width: 100%;
       padding: 74px 21px 0px 14px;
     }
+
+    &__bot-list-2 {
+      padding: 10px 45px 10px 20px;
+    }
+
+    // &__bot-list-2-item:not(:last-child) {
+    //   margin-bottom: 5px;
+    // }
   }
 }
