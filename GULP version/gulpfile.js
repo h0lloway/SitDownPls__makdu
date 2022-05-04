@@ -21,9 +21,9 @@ const gulp = require('gulp');
 const webp = require('gulp-webp');
 const babel = require('gulp-babel')
 const uglify = require('gulp-uglify-es').default;
-const tiny = require('gulp-tinypng-compress');
 // const gutil = require('gulp-util');
 // const ftp = require('vinyl-ftp');
+const cheerio = require('gulp-cheerio');
 
 
 const fonts = () => {
@@ -44,6 +44,18 @@ const svgSprites = () => {
         }
       }
     }))
+
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {
+        xmlMode: true
+      }
+    }))
+
     .pipe(dest('./dev/img'))
 }
 
@@ -75,12 +87,17 @@ const styles = () => {
 // ])
 // }
 
-const webpImages = () => {
-  return src(['./src/img/**.jpg,jpeg,png'])
-    .pipe(webp())
-    .pipe(dest('./dev/img'))
-};
+// const webpImages = () => {
+//   return src(['./src/img/**.jpg,jpeg,png'])
+//     .pipe(webp())
+//     .pipe(dest('./dev/img'))
+// };
 
+gulp.task('default', () =>
+  gulp.src(['./src/img/**.jpg,jpeg,png'])
+    .pipe(webp())
+    .pipe(gulp.dest('./dev/img'))
+);
 
 const htmlInclude = () => {
   return src(['./src/*.html'])
@@ -109,51 +126,19 @@ const clean = () => {
   return del(['dev/*'])
 }
 
-// const scripts = () => {
-//   return src('./src/js/main.js')
-//     .pipe(webpackStream({
-//       mode: 'development',
-//       output: {
-//         filename: 'main.js',
-//       },
-//       module: {
-//         rules: [{
-//           test: /\.m?js$/,
-//           exclude: /(node_modules|bower_components)/,
-//           use: {
-//             loader: 'babel-loader',
-//             options: {
-//               presets: ['@babel/preset-env']
-//             }
-//           }
-//         }]
-//       },
-//     }))
-//     .on('error', function (err) {
-//       console.error('WEBPACK ERROR', err);
-//       this.emit('end'); // Don't stop the rest of the task
-//     })
-//     .pipe(sourcemaps.init())
-//     .pipe(uglify().on("error", notify.onError()))
-//     .pipe(sourcemaps.write('.'))
-//     .pipe(dest('./app/js'))
-//     .pipe(browserSync.stream());
-// }
-
-
 const scripts = () => {
   return src([
-      './src/js/components/**/*.js',
-      './src/js/main.js'
+    './src/js/components/**/*.js',
+    './src/js/main.js'
   ])
-      // .pipe(sourcemaps.init())
-      // .pipe(babel({
-      //     presets: ['@babel/env']
-      // }))
-      // .pipe(concat('main.js'))
-      .pipe(sourcemaps.write())
-      .pipe(dest('./dev/js'))
-      .pipe(browserSync.stream())
+    // .pipe(sourcemaps.init())
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    // }))
+    // .pipe(concat('main.js'))
+    .pipe(sourcemaps.write())
+    .pipe(dest('./dev/js'))
+    .pipe(browserSync.stream())
 }
 
 const watchFiles = () => {
@@ -174,7 +159,7 @@ const watchFiles = () => {
   // watch('./src/img/**.svg', imgToApp);
   watch('./src/img/**.svg', svgSprites);
   watch('./src/resources/**', resources);
-  watch('./src/img/**.jpg,jpeg,png', webpImages);
+  // watch('./src/img/**.jpg,jpeg,png', webpImages);
   watch('./src/fonts/**.ttf', fonts);
   watch('./src/js/**/*.js', scripts);
   watch('./src/resources/**', resources);
@@ -186,19 +171,8 @@ exports.scripts = scripts
 exports.watchFiles = watchFiles;
 exports.fileinclude = htmlInclude;
 
-exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, webpImages, svgSprites), styles, watchFiles);
+exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp, svgSprites), styles, watchFiles);
 // exports.default = series(clean, parallel(htmlInclude, scripts, fonts, resources, imgToApp), styles, watchFiles);
-
-const tinypng = () => {
-	return src(['./src/img/**.jpg', './src/img/**.png', './src/img/**.jpeg', './src/img/**.webp'])
-		.pipe(tiny({
-			key: 'b48l2YMYzLP3pCq4FR7kcGV32DXlKTFW',
-      parallel: true,
-      parallelMax: 80,
-			log: true
-		}))
-		.pipe(dest('./build/img'))
-}
 
 const fontsBuild = () => {
   src('./src/fonts/**.ttf')
@@ -269,17 +243,13 @@ const stylesBuild = () => {
 
 const scriptsBuild = () => {
   return src([
-      './src/js/components/**/*.js',
-      './src/js/main.js'
+    './src/js/components/**/*.js',
+    './src/js/main.js'
   ])
-      // .pipe(babel({
-      //     presets: ['@babel/env']
-      // }))
-      // .pipe(concat('main.js'))
-      // .pipe(uglify({
-      //     toplevel: true
-      // }).on('error', notify.onError()))
-      .pipe(dest('./build/js'))
+    // .pipe(babel({
+    //     presets: ['@babel/env']
+    // }))
+    .pipe(dest('./build/js'))
 }
 
 const imgToAppBuild = () => {
@@ -300,8 +270,8 @@ const svgSpritesBuild = () => {
 }
 
 
-exports.build = series(clean, parallel(htmlIncludeBuild, scriptsBuild, fontsBuild, resources, imgToAppBuild, svgSpritesBuild), stylesBuild, tinypng);
-// exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp), stylesBuild, tinypng);
+exports.build = series(clean, parallel(htmlIncludeBuild, scriptsBuild, fontsBuild, resources, imgToAppBuild, svgSpritesBuild), stylesBuild);
+// exports.build = series(clean, parallel(htmlInclude, scriptsBuild, fonts, resources, imgToApp), stylesBuild);
 
 // // deploy
 // const deploy = () => {
