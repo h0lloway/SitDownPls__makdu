@@ -457,6 +457,76 @@
   opacity: 1;
 }
 
+// ещё один общий чекбокс
+
+.common-label {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #666;
+  margin-bottom: 11px;
+  cursor: pointer;
+  width: max-content;
+}
+
+.common-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.common-label span {
+  position: relative;
+  padding-left: 32px;
+}
+
+.common-label span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #666;
+  border-radius: 2px;
+  transition: all .2s ease-in-out;
+}
+
+.common-label span::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 8px;
+  height: 13px;
+  border-right: 2px solid var(--white-color);
+  border-bottom: 2px solid var(--white-color);
+  opacity: 0;
+  transform: rotate(45deg);
+  transition: all .2s ease-in-out;
+}
+
+.common-input:checked+span:before {
+  background: #A65CF0;
+}
+
+.common-input:checked+span::after {
+  opacity: 1;
+}
+
+.common-input:focus-visible+span::before {
+  background-color: #EBD1FF;
+}
+
+//                  //                         //                           //                            //
+
+
 .rules-link {
   color: var(--purple-color);
   text-decoration: underline;
