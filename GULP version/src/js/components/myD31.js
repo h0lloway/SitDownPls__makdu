@@ -17,3 +17,22 @@ const d31Swiper = new Swiper('.d31__swiper', {
     prevEl: '.d31__swiper-button-prev',
   },
 });
+
+
+const modalSwiper = new Swiper('.modal-swiper', {
+  // Optional parameters
+  // direction: 'vertical',
+  // loop: true,
+  slidesPerGroup: 1,
+  slidesPerView: "auto",
+  lazy: {
+    loadPrevNext: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+

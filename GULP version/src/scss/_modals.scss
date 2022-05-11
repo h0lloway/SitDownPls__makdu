@@ -101,38 +101,66 @@
 }
 
 .modal--2 {
+	position: relative;
 	max-width: 1280px;
-	min-height: 684px;
 	overflow: hidden;
 	border-radius: 10px;
 	margin: 0 20px;
 
-	padding: 50px 100px 20px 100px;
+	padding: 50px 0 20px 0;
 
 	.modal-content {
 		position: relative;
 		background-color: var(--color-white);
 	}
 
-	.modal-content::before {
-		content: "";
-    position: absolute;
-    width: 126%;
-    height: 188px;
-    background-color: var(--f7f7f7-color);
-    bottom: -20px;
-    left: -110px;
-    z-index: -1;
+	.modal-main-img {
+		display: block;
+		margin: 0 auto;
+		max-width: 100%;
 	}
 
 	.modal-mini-img {
-		display: flex;
-		justify-content: space-between;
-
 		margin-top: 70px;
-		margin-right: -50px;
-    margin-left: -50px;
 	}
+
+	.modal-swiper-content {
+		position: relative;
+	}
+
+	.modal-swiper {
+		max-width: 1190px;
+		margin: 0 50px;
+	}
+
+	.modal-swiper-slide:not(:last-child) {
+		margin-right: 68px;
+	}
+
+	.modal-swiper-slide {
+		width: max-content;
+	}
+
+	.swiper-button-next:after,
+	.swiper-rtl .swiper-button-prev:after {
+		content: none;
+	}
+
+	.swiper-button-prev:after,
+	.swiper-rtl .swiper-button-next:after {
+		content: none;
+	}
+}
+
+.modal--2::before {
+	content: "";
+	position: absolute;
+	width: 126%;
+	min-height: 32%;
+	background-color: var(--f7f7f7-color);
+	bottom: -20px;
+	left: -110px;
+	z-index: -1;
 }
 
 .modal--3 {

@@ -1,18 +1,3 @@
-
-// let tl = gsap.timeline();
-
-// tl.from('.top-category', { opacity: 0, y: 100, duration: 0.7 })
-
-// burger
-
-// $(document).ready(function () {
-//   $('.header__burger').click(function (event) {
-//     $('.header__burger,.header__bot-nav').toggleClass('active');
-//     $('body').toggleClass('lock');
-//   });
-// });
-
-
 // swiper // swiper // swiper // swiper // swiper // swiper // swiper // swiper // swiper // swiper 
 
 const HeroSwiper = new Swiper('.hero__swiper', {
@@ -27,6 +12,7 @@ const HeroSwiper = new Swiper('.hero__swiper', {
   pagination: {
     el: '.hero__swiper-pagination',
   },
+
 });
 
 

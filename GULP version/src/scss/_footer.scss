@@ -46,6 +46,9 @@
 
 	&__list-social {
 		display: flex;
+    flex-wrap: wrap;
+
+    max-width: 200px;
 	}
 
 	.social {
@@ -188,7 +191,6 @@
 	}
 }
 
-
 @media (max-width: 1000px) {
 	.footer {
 		&__top {
@@ -208,7 +210,6 @@
 }
 
 @media (max-width: 800px) {
-
 	.footer {
 		&__container {
 			padding: 27px 72px 54px;
@@ -234,7 +235,6 @@
 }
 
 @media (max-width: 700px) {
-
 	.footer {
 
 		&__picture {
@@ -243,13 +243,13 @@
 		}
 
 		&__logo {
-			margin-bottom: 17px;
+      margin-bottom: 24px;
 		}
 
 		&__lists {
 			flex-direction: column;
 			margin-top: 23px;
-			padding-bottom: 18px;
+      padding-bottom: 30px;
 		}
 
 		.footer-list {
@@ -258,7 +258,7 @@
 
 		&__lists-right {
 			padding-right: 10px;
-			padding-top: 18px;
+      padding-top: 31px;
 		}
 
 		.list-two,
@@ -270,10 +270,9 @@
 }
 
 @media (max-width: 600px) {
-
 	.footer {
 		&__container {
-			padding: 25px 13px 27px;
+      padding: 22px 13px 27px;
 		}
 	}
 }

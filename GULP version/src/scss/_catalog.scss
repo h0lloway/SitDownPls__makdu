@@ -2,6 +2,10 @@
   padding-top: 20px;
   padding-bottom: 70px;
 
+  &__tabs-content-low {
+    display: none;
+  }
+
   &__links {
     margin-bottom: 32px
   }
@@ -54,6 +58,9 @@
   &__form {
     display: flex;
     flex-direction: column;
+
+    border: none;
+    outline: none;
   }
 
   .form-title {
@@ -467,7 +474,7 @@
       margin: 34px auto 0;
     }
 
-    &__btn-list-item:nth-child(1) {
+    &__btn-list-item:not(:last-child) {
       margin-right: 15px;
       margin-left: 0px;
     }
@@ -634,6 +641,14 @@
 @media (max-width: 1023px) {
   .catalog {
 
+    &__tabs-content {
+      display: none;
+    }
+
+    &__tabs-content-low {
+      display: block;
+    }
+
     &__title {
       margin-bottom: 26px;
     }
@@ -680,6 +695,12 @@
   }
 }
 
+// @media (max-width: 800px) {
+//   .catalog {
+
+//   }
+// }
+
 @media (max-width: 650px) {
   .catalog {
 
@@ -700,6 +721,21 @@
 
 @media (max-width: 500px) {
   .catalog {
+
+    padding-top: 32px;
+
+    &__img  {
+      height: 50px !important;
+      margin-bottom: 19px;
+    }
+
+    &__subtitle {
+      margin-bottom: 18px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
 
     .dropfilter {
       grid-template-columns: repeat(2, 1fr);

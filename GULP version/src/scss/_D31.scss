@@ -322,8 +322,8 @@
   .swiper-button-next,
   .swiper-button-prev {
     position: static;
-    width: auto;
-    height: auto;
+    width: 32px;
+    height: 32px;
   }
 
   .swiper-button-disabled svg path,
@@ -464,6 +464,14 @@
     &__mini-img li:not(:last-child) {
       margin-right: 38px;
       margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .d31 {
+    &__swiper-btns {
+      bottom: 473px;
     }
   }
 }
