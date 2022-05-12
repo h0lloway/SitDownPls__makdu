@@ -532,7 +532,7 @@
     &__bot-descr {
       width: 100%;
       background-size: contain;
-      padding-bottom: 94px;
+      padding-bottom: 120px;
       margin-bottom: 28px;
     }
 
@@ -586,4 +586,16 @@
       transform: translateX(50%);
     }
   }
+}
+
+@media (max-width: 400px) {
+  .d31 {
+    &__bot-descr {
+      width: 100%;
+      background-size: contain;
+      padding-bottom: 94px;
+      margin-bottom: 28px;
+    }
+  }
+
 }

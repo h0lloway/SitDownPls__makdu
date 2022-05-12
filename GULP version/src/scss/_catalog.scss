@@ -695,12 +695,6 @@
   }
 }
 
-// @media (max-width: 800px) {
-//   .catalog {
-
-//   }
-// }
-
 @media (max-width: 650px) {
   .catalog {
 
@@ -724,9 +718,9 @@
 
     padding-top: 32px;
 
-    &__img  {
-      height: 50px !important;
-      margin-bottom: 19px;
+    &__img {
+      height: 66px !important;
+      margin-bottom: 10px;
     }
 
     &__subtitle {
