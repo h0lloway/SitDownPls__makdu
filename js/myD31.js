@@ -1,4 +1,46 @@
-const d31Swiper = new Swiper('.d31__swiper', {
+const topSwiper = new Swiper('.sofa-sample__top-swiper', {
+  // Optional parameters
+  // loop: true,
+  slidesPerGroup: 1,
+  slidesPerView: "auto",
+  lazy: {
+    loadPrevNext: true,
+  },
+
+  // If we need pagination
+  // pagination: {
+  //   el: '.swiper-pagination',
+  // },
+
+  // Navigation arrows
+  // navigation: {
+  //   nextEl: '.swiper-button-next',
+  //   prevEl: '.swiper-button-prev',
+  // },
+
+  // And if we need scrollbar
+  // scrollbar: {
+  //   el: '.swiper-scrollbar',
+  // },
+
+  // breakpoints: {
+  //   1011: {
+  //     direction: 'horizontal',
+  //   },
+
+  //   740: {
+  //     direction: 'vertical',
+  //   },
+
+  //   320: {
+  //     direction: 'horizontal',
+  //   }
+  // }
+});
+
+
+
+const bottomSwiper = new Swiper('.sofa-sample__bottom-swiper', {
   slidesPerGroup: 1,
   slidesPerView: "auto",
   speed: 900,
@@ -13,8 +55,8 @@ const d31Swiper = new Swiper('.d31__swiper', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.d31__swiper-button-next',
-    prevEl: '.d31__swiper-button-prev',
+    nextEl: '.sofa-sample__swiper-button-next',
+    prevEl: '.sofa-sample__swiper-button-prev',
   },
 });
 

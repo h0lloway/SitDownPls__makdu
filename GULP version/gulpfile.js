@@ -23,7 +23,7 @@ const babel = require('gulp-babel')
 const uglify = require('gulp-uglify-es').default;
 // const gutil = require('gulp-util');
 // const ftp = require('vinyl-ftp');
-const cheerio = require('gulp-cheerio');
+// const cheerio = require('gulp-cheerio');
 
 
 const fonts = () => {
@@ -45,16 +45,16 @@ const svgSprites = () => {
       }
     }))
 
-    .pipe(cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-      parserOptions: {
-        xmlMode: true
-      }
-    }))
+    // .pipe(cheerio({
+    //   run: function ($) {
+    //     $('[fill]').removeAttr('fill');
+    //     $('[stroke]').removeAttr('stroke');
+    //     $('[style]').removeAttr('style');
+    //   },
+    //   parserOptions: {
+    //     xmlMode: true
+    //   }
+    // }))
 
     .pipe(dest('./dev/img'))
 }
