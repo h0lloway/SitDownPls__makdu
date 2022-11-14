@@ -1,41 +1,36 @@
-const topSwiper = new Swiper('.sofa-sample__top-swiper', {
-  // Optional parameters
-  // loop: true,
-  slidesPerGroup: 1,
-  slidesPerView: "auto",
-  lazy: {
-    loadPrevNext: true,
+var swiper = new Swiper(".small-swiper", {
+  spaceBetween: 38,
+  slidesPerView: 'auto',
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    320: {
+      // slidesPerGroup: 1,
+      direction: "horizontal",
+      slidesPerView: 'auto',
+    },
+    720: {
+      // slidesPerGroup: 2,
+      direction: "vertical",
+      // slidesPerView: 5,
+      slidesPerGroup: 5,
+    },
+    1010: {
+      // slidesPerGroup: 3,
+      direction: "horizontal",
+      slidesPerView: 'auto',
+    }
   },
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  // },
-
-  // Navigation arrows
-  // navigation: {
-  //   nextEl: '.swiper-button-next',
-  //   prevEl: '.swiper-button-prev',
-  // },
-
-  // And if we need scrollbar
-  // scrollbar: {
-  //   el: '.swiper-scrollbar',
-  // },
-
-  // breakpoints: {
-  //   1011: {
-  //     direction: 'horizontal',
-  //   },
-
-  //   740: {
-  //     direction: 'vertical',
-  //   },
-
-  //   320: {
-  //     direction: 'horizontal',
-  //   }
-  // }
+});
+var swiper2 = new Swiper(".big-swiper", {
+  spaceBetween: 10,
+  navigation: {
+    // nextEl: ".swiper-button-next",
+    // prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
 });
 
 
@@ -78,3 +73,48 @@ const modalSwiper = new Swiper('.modal-swiper', {
   },
 });
 
+var swiper = new Swiper(".modal-d31-swiper-small", {
+  spaceBetween: 55,
+  slidesPerView: 4,
+  slidesPerGroup: 4,
+  navigation: {
+    nextEl: ".swiper-modal-button-next",
+    prevEl: ".swiper-modal-button-prev",
+  },
+  freeMode: true,
+  watchSlidesProgress: true,
+
+  breakpoints: {
+    320: {
+      spaceBetween: 63,
+      slidesPerGroup: 1,
+      slidesPerView: 1,
+    },
+    500: {
+      slidesPerGroup: 1,
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerGroup: 1,
+      slidesPerView: 2,
+    },
+    // 900: {
+    //   // slidesPerGroup: 5,
+
+    //   slidesPerView: 3,
+    // },
+    1024: {
+      spaceBetween: 70,
+      slidesPerView: 3,
+    }
+
+  },
+
+});
+var swiper2 = new Swiper(".modal-d31-swiper-big", {
+  spaceBetween: 10,
+
+  thumbs: {
+    swiper: swiper,
+  },
+});
