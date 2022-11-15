@@ -33,10 +33,7 @@ let enableScroll = function () {
 
 closeBtns.forEach(closeBtn => {
   closeBtn.addEventListener('click', function (event) {
-
-    // document.querySelector('.modal-overlay').classList.remove('modal-overlay--visible');
     modalOverlay.classList.remove('modal-overlay--visible');
-    // document.querySelector('.modal').classList.remove('modal--visible');
     modals.forEach((el) => {
       el.classList.remove('modal--visible');
     });

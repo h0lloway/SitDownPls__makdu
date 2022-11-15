@@ -42,7 +42,6 @@ const SpecialSwiper = new Swiper('.special-price__swiper', {
 });
 
 
-
 const UsefulSwiper = new Swiper('.useful__swiper', {
   slidesPerGroup: 1,
   slidesPerView: "auto",
@@ -86,25 +85,6 @@ const UsefulSwiper = new Swiper('.useful__swiper', {
   }
 });
 
-
-
-// Подумать как это сделать по человечески
-// High rating кнопка
-// let hifgRatingItems = gsap.timeline({ paused: true })
-
-// hifgRatingItems
-//   .to(".hidden", { duration: .3, opacity: 1, visibility: "visible", display: "block" })
-
-// document.querySelector(".button-active").addEventListener("click", function () {
-//   document.querySelector(".button-close").classList.add("vis")
-//   document.querySelector(".button-active").classList.add("hid")
-//   hifgRatingItems.timeScale(1).play()
-// })
-// document.querySelector(".button-close").addEventListener("click", function () {
-//   document.querySelector(".button-active").classList.remove("hid")
-//   document.querySelector(".button-close").classList.remove("vis")
-//   hifgRatingItems.timeScale(2).reverse()
-// })
 
 // more-button // more-button // more-button // more-button // more-button // more-button 
 
